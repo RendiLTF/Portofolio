@@ -19,6 +19,7 @@
     <title>My Portofolio | Rendi Lutfi Ramadhan</title>
   </head>
   <body id="home">
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1688d4" shadow-sm>
       <div class="container">
@@ -38,6 +39,9 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#gallery">gallery</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -48,10 +52,10 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/profile.jpg" alt="Rendi Lutfi" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/profile.jpeg" alt="Rendi Lutfi" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Rendi Lutfi Ramadhan</h1>
-      <h5 class="lead">Collage Student with GPA 3.19 | Darma Persada Univeristy</h5>
-      <h5 class="lead">FullStack Developer | Staff IT ( IT Support )</h5>
+      <h5 class="lead lead1"></h5>
+      <h5 class="lead lead2"></h5>
       <div class="card row-md-4 justify-content-center" style="background-color:#e2edff">
         <div class="card-body">
           Saya adalah Mahasiswa Aktif Universitas Darma Persada mengambil jurusan Sistem Informasi. Selain itu, saya adalah seorang Web Developer | FrontEnd Developer | BackEnd Developer. Saya menguasai beberapa bahasa pemrograman serta framework diantaranya : HTML, Sql, PHP, Phyton, Jquery, JavaScript | Laravel, CI | Database Mysql, Firebase.
@@ -290,10 +294,22 @@
 
       
       AOS.init({
-        once: true,
+        
       });
     </script>
-     
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+     <script>
+       gsap.registerPlugin(TextPlugin);
+       gsap.to('.lead1', {duration: 1.5, delay: 1.5, text: 'Collage Student with GPA 3.19 | Darma Persada Univeristy'});
+       gsap.to('.lead2', {duration: 1.5, delay: 2, text: 'FullStack Developer | IT Staff (IT Support)'});
+       gsap.from('.jumbotron img', {duration: 1, rotateY: 360, opacity: 0,});
+      //  gsap.from('.navbar', {duration: 1.5, y: '100%', opacity: 0, ease: 'bounce'});
+       gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
+     </script>
+     <!-- Terhubung Ke Google Sheet -->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxo7N9DgrVN1ZUeDT8yFBuZCqEfm4oTtPvDAgsdRLLRL2lX2p2MmSE-Xtz-lLyFPLdg/exec'
       const form = document.forms['rendi-contact-form']
