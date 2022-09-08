@@ -109,7 +109,3 @@ section {
 .contact-box:hover .instagram-img {
   transform: translate3d(-50%, -50%, 100px) rotate(5deg) scale(1.2);
 }
-.cd-headline.clip .cd-words-wrapper {
-  overflow: hidden;
-  vertical-align: top;
-}
