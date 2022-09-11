@@ -27,6 +27,11 @@
   width: 100%;
   height: 100%;
 }
+.blockquote-footer {
+  color: #f2f2f2;
+  margin-top: 0.5em;
+  text-align: justify;
+}
 ::before,
 ::after {
   box-sizing: border-box;
